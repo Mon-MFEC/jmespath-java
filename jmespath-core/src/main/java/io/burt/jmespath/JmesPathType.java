@@ -9,7 +9,8 @@ public enum JmesPathType {
   BOOLEAN,
   ARRAY,
   OBJECT,
-  NULL;
+  NULL,
+  DATE;
 
   @Override
   public String toString() {
