@@ -140,7 +140,9 @@ public abstract class ComparisonNode<T> extends OperatorNode<T> {
     T rightResult = operand(1).search(input);
     JmesPathType leftType = runtime.typeOf(leftResult);
     JmesPathType rightType = runtime.typeOf(rightResult);
-    if (leftType == JmesPathType.NUMBER && rightType == JmesPathType.NUMBER) {
+    if ((leftType == JmesPathType.NUMBER && rightType == JmesPathType.NUMBER) ||
+        (leftType == JmesPathType.DATE && rightType == JmesPathType.NUMBER) ||
+            (rightType == JmesPathType.DATE && leftType == JmesPathType.NUMBER)) {
       return compareNumbers(leftResult, rightResult);
     } else {
       return compareObjects(leftResult, rightResult);
