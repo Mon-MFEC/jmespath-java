@@ -5,7 +5,7 @@
 
   <groupId>io.burt</groupId>
   <artifactId>jmespath</artifactId>
-  <version>0.6.1-SNAPSHOT</version>
+  <version>0.6.1-MFEC</version>
   <packaging>pom</packaging>
 
   <name>JMESPath</name>
